@@ -22,3 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('add.urls', namespace='add')),
 ]
+
+handler400 = 'utils.views.error_400'
+handler401 = 'utils.views.error_401'
+handler404 = 'utils.views.error_404'
+handler500 = 'utils.views.error_500'
