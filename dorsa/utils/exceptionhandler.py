@@ -1,4 +1,3 @@
-# from rest_framework.exceptions import NotFound
 from rest_framework.views import exception_handler
 
 
@@ -20,7 +19,7 @@ def custom_exception_handler(exc, context):
 
 def _handle_generic_error(exec, context, response):
     response.data = {
-        'error': 'You dont\'t have permission to do this action'
+        'error': 'this is my custom handler. You dont\'t have permission to do this action'
     }
     return response
 
